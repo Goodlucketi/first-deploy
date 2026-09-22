@@ -1,0 +1,247 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sub-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    margin: 10px auto;
+}
+h2{
+    font-size:30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.grid-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    width: 90%;
+    margin: 10px auto;
+ 
+}
+
+.grid-layout>div{
+    height: 300px;
+    border-radius: 30px;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    transition: all 2s;
+    transform: rotate(30deg);
+    margin: 10px;
+}
+
+.grid-layout>div:hover{
+    padding: 40px;
+    /* margin: 0 auto; */
+    
+}
+
+.number, .icon{
+    position: absolute;
+    top: 20px;
+    background: #aaa;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.number{
+    left: 20px;
+}
+.icon{
+    right: 20px;
+    padding: 8px 12px;
+}
+
+.text{
+    position: absolute;
+    bottom: 20px;
+}
+.item1{
+     background: linear-gradient( to top right, rgba(1, 1, 35, 0.889), #ffffff00), url('../images/power-your-home.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.item2{
+     background: linear-gradient( to top right, rgba(1, 1, 44, 0.911), #ffffff00), url('../images/grow-your-business.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.item3{
+     background: linear-gradient( to top right, rgba(0, 0, 35, 0.952), #ffffff00), url('../images/grow-your-business.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.item4{
+     background: linear-gradient( to top right, rgba(1, 1, 52, 0.932), #ffffff00), url('../images/power-your-home.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.item5{
+     background: linear-gradient( to top right, rgba(1, 1, 52, 0.985), #ffffff00), url('../images/grow-your-business.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.item6{
+     background: linear-gradient( to top right, rgba(1, 1, 52, 0.935), #ffffff00), url('../images/power-your-home.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.item7{
+     background: linear-gradient( to top right, rgba(1, 1, 52, 0.931), #ffffff00), url('../images/grow-your-business.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.item8{
+     background: linear-gradient( to top right, rgba(1, 1, 52, 0.935), #ffffff00), url('../images/power-your-home.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.item9{
+     background: linear-gradient( to top right, rgba(1, 1, 52, 0.931), #ffffffc6), url('../images/grow-your-business.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+/* h2::first-letter{
+    font-size: 50px;
+}
+
+.grid-item::file-selector-button{
+
+} */
+
+ul{
+    list-style:none;
+}
+
+li::before{
+    content:"👤";
+}
+
+.parent p, a{
+    color: blue;
+    font-size: 30px;
+}
+
+.parent > p{
+    color: red;
+}
+
+button a{
+    text-decoration: none;
+    padding: 10px;
+    color: purple;
+}
+
+main > .sub-title > p{
+
+}
+
+button:hover {
+    background: red;
+}
+
+/* General Sibling */
+header > p + div{
+    background: pink;
+    height: 200px;
+    width: 200px;
+}
+
+
+.transition{
+    width: 20%;
+    height: 200px;
+    /* background: url('../images/power-your-home.webp') no-repeat;
+    background-size: cover; */
+    padding: 10px;
+    margin: 50px;
+    /* transition-property: all;
+    transition-duration: 5s;
+    transition-delay: 5s;
+    transition-timing-function: ease-out; */
+
+    transition: all 2s 3s ease-in;
+    /* animation-name: colorChange;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; */
+
+    animation: colorChange 10s infinite 5s;
+
+}
+
+.transition:hover{
+    width: 30%;
+    height: 300px;
+}
+
+@keyframes colorChange {
+    0%{
+        background: url('../images/grow-your-business.webp') no-repeat;
+        background-size: cover;
+    }
+
+    50%{
+        background: url('../images/power-your-home.webp') no-repeat;
+        background-size: cover;
+    }
+
+    100%{
+        background: url('../images/grow-your-business.webp');
+        background-size: cover;
+    }
+}
+
+/* CSS TRANSFORM
+An effect that allows us to change the size, shape and position of an element
+
+The 'transform' property is used to create transformation effects.
+
+Different CSS transforms includes
+1. Translate - (translateX(), translateY(), translate())
+2. Scale - (scaleX(), scaleY(), scale())
+3. Rotate - rotateX, rotateY(), rotate())
+4. Skew - (skewX, skewY, skew())
+
+
+*/
+@keyframes animate-translate {
+    0%{
+        transform: rotate(90deg);
+    }
+
+    50%{
+        transform: rotate(180deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.transform{
+    width: 200px;
+    height: 200px;
+    background: #aaa;
+    margin: 50px;
+    padding: 10px;
+    transform:skewX(35deg);
+    /* animation: animate-translate 1s infinite ; */
+}
+
