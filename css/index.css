@@ -208,6 +208,10 @@ header > p + div{
     }
 }
 
+marquee{
+    background:blue;
+    color:white;
+}
 /* CSS TRANSFORM
 An effect that allows us to change the size, shape and position of an element
 
