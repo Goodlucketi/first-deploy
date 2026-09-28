@@ -208,10 +208,26 @@ header > p + div{
     }
 }
 
-marquee{
-    background:blue;
-    color:white;
+.slide {
+  background: blue;
+  color: white;
+  display: flex;
+  gap: 60px; /* Clean way to space items instead of space-around */
+  width: max-content;
+  padding: 15px 0;
+  animation: marquee-scroll 60s linear infinite;
 }
+
+/* Parent container needed to hide the horizontal scrollbar */
+body {
+  overflow-x: hidden; 
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Perfect seamless loop */
+}
+
 /* CSS TRANSFORM
 An effect that allows us to change the size, shape and position of an element
 
@@ -222,9 +238,8 @@ Different CSS transforms includes
 2. Scale - (scaleX(), scaleY(), scale())
 3. Rotate - rotateX, rotateY(), rotate())
 4. Skew - (skewX, skewY, skew())
-
-
 */
+
 @keyframes animate-translate {
     0%{
         transform: rotate(90deg);
